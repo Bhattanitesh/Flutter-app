@@ -46,7 +46,10 @@ class _CalculatorState extends State<Calculator> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Calculator'),
+        centerTitle: true,
+        title: Text(
+          'CALCULATOR',
+        ),
         backgroundColor: Colors.black,
       ),
       body: Padding(
@@ -77,10 +80,10 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                calcbutton('AC', Colors.grey, Colors.black),
+                calcbutton('AC', Colors.red, Colors.white),
                 calcbutton('+/-', Colors.grey, Colors.black),
                 calcbutton('%', Colors.grey, Colors.black),
-                calcbutton('/', Colors.amber[700], Colors.white),
+                calcbutton('/', Colors.blue, Colors.white),
               ],
             ),
             SizedBox(
@@ -92,7 +95,7 @@ class _CalculatorState extends State<Calculator> {
                 calcbutton('7', Colors.grey[850], Colors.white),
                 calcbutton('8', Colors.grey[850], Colors.white),
                 calcbutton('9', Colors.grey[850], Colors.white),
-                calcbutton('x', Colors.amber[700], Colors.white),
+                calcbutton('x', Colors.blue[700], Colors.white),
               ],
             ),
             SizedBox(
@@ -104,7 +107,7 @@ class _CalculatorState extends State<Calculator> {
                 calcbutton('4', Colors.grey[850], Colors.white),
                 calcbutton('5', Colors.grey[850], Colors.white),
                 calcbutton('6', Colors.grey[850], Colors.white),
-                calcbutton('-', Colors.amber[700], Colors.white),
+                calcbutton('-', Colors.blue[700], Colors.white),
               ],
             ),
             SizedBox(
@@ -116,7 +119,7 @@ class _CalculatorState extends State<Calculator> {
                 calcbutton('1', Colors.grey[850], Colors.white),
                 calcbutton('2', Colors.grey[850], Colors.white),
                 calcbutton('3', Colors.grey[850], Colors.white),
-                calcbutton('+', Colors.amber[700], Colors.white),
+                calcbutton('+', Colors.blue[700], Colors.white),
               ],
             ),
             SizedBox(
@@ -139,7 +142,7 @@ class _CalculatorState extends State<Calculator> {
                   color: Colors.grey[850],
                 ),
                 calcbutton('.', Colors.grey[850], Colors.white),
-                calcbutton('=', Colors.amber[700], Colors.white),
+                calcbutton('=', Colors.green, Colors.white),
               ],
             ),
             SizedBox(
@@ -150,6 +153,8 @@ class _CalculatorState extends State<Calculator> {
       ),
     );
   }
+
+  Type buildCenter() => Center;
 
   //Calculator logic
   dynamic text = '0';
