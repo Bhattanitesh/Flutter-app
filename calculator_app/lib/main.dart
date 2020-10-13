@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +8,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Calculator(),
+      home: AnimatedSplashScreen(
+        splash: Image.asset(
+          'assets/jarvis.jpg',
+        ),
+        nextScreen: Calculator(),
+        splashTransition: SplashTransition.fadeTransition,
+        backgroundColor: Colors.black,
+        duration: 3000,
+      ),
     );
   }
 }
